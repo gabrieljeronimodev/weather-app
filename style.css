@@ -82,7 +82,7 @@ body {
     }
 
     .card {
-        height: 100svh;
+        min-height: 100svh;
         width: 100%;
         max-width: none;
         border-radius: 0;
@@ -95,5 +95,11 @@ body {
 
     #humid-display, #wind-display {
         font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .atmosphera-wrapper {
+        flex-direction: column;
     }
 }
