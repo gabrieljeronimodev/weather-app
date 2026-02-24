@@ -75,3 +75,25 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 720px) {
+    body {
+        background-image: linear-gradient(45deg, #3FE6BA, #595A8F);
+    }
+
+    .card {
+        height: 100svh;
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        background: none;
+    }
+
+    .data-wrapper {
+        gap: 1.5rem;
+    }
+
+    #humid-display, #wind-display {
+        font-size: 2.5rem;
+    }
+}
