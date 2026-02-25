@@ -49,8 +49,19 @@ function showData(data) {
         weather: [{id}]
     } = data;
 
+    iconDisplay.textContent = getEmoji(id);
     tempDisplay.textContent = `${temp.toFixed(0)}°C`;
     humidDisplay.textContent = `${humidity}%`;
     windDisplay.textContent = `${(windSpeed * 3.6).toFixed(0)}km/h`;
     placeDisplay.textContent = name;
+}
+
+function getEmoji(id) {
+    if(id >= 200 && id < 300) return '⛈️';
+    if(id >= 300 && id < 400) return '🌦️';
+    if(id >= 500 && id < 600) return '🌧️';
+    if(id >= 600 && id < 700) return '❄️';
+    if(id === 800) return '☀️';
+    if(id >= 800) return '⛅';
+    return '❔';
 }
