@@ -1,6 +1,6 @@
 // O correto e usar a chave no backend
 const key = '835e0be4412628b5f3fb1d44d9fa9645';
-const inputValue = document.getElementById('input').value;
+const input = document.getElementById('input');
 const form = document.getElementById('search-wrapper');
 const iconDisplay = document.getElementById('icon-display');
 const tempDisplay = document.getElementById('temp-display');
@@ -11,9 +11,9 @@ const windDisplay = document.getElementById('wind-display');
 form.addEventListener('submit', async event => {
     event.preventDefault();
 
-    if(inputValue) {
+    if(input.value) {
         try {
-            const data = await getApiData(inputValue);
+            const data = await getApiData(input.value);
             showData(data);
         }
         catch(error) {
