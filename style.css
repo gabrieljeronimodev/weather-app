@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+body {
+    background: #222;
+    color: #ffffee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 95%;
+    max-width: 550px;
+    background-image: linear-gradient(45deg, #3FE6BA, #595A8F);
+    padding: min(50px, 7%);
+    border-radius: 50px;
+
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+}
+
+#search-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+#input, #searchBtn {
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+}
+
+#input {
+    flex: 1;
+    width: 0;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+#searchBtn {
+    cursor: pointer;
+    transition: 300ms ease;
+
+    &:hover {
+        background: #999;
+    }
+
+    &:hover > svg {
+        fill: #ffffee;
+    }
+}
+
+.data-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#icon-display {
+    font-size: 7rem;
+}
+
+#temp-display {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+#city-display {
+    font-size: 3rem;
+}
+
+.atmosphera-wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.humid-wrapper, .wind-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.humid-display-wrapper, .wind-display-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#humid-display, #wind-display {
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        background-image: linear-gradient(45deg, #3FE6BA, #595A8F);
+    }
+
+    .card {
+        min-height: 100svh;
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        background: none;
+    }
+
+    .data-wrapper {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .atmosphera-wrapper {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: .7rem;
+    }
+
+    #search-wrapper {
+        gap: .5rem;
+    }
+
+    #input, #searchBtn {
+        padding: .6rem;
+    }
+
+    #input {
+        text-indent: .5rem;
+    }
+}
