@@ -42,4 +42,15 @@ async function getApiData(input) {
 }
 
 function showData(data) {
+    const {
+        name,
+        main: {temp, humidity},
+        wind: {speed: windSpeed},
+        weather: [{id}]
+    } = data;
+
+    tempDisplay.textContent = `${temp.toFixed(0)}°C`;
+    humidDisplay.textContent = `${humidity}%`;
+    windDisplay.textContent = `${(windSpeed * 3.6).toFixed(0)}km/h`;
+    placeDisplay.textContent = name;
 }
