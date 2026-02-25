@@ -18,6 +18,7 @@ form.addEventListener('submit', async event => {
         catch(error) {
             if(error.message === 'API_ERROR') {
                 console.log(error.message);
+                console.log(error);
             }
             else {
                 console.log('Unespected error\n', error);
@@ -27,9 +28,18 @@ form.addEventListener('submit', async event => {
 });
 
 async function getApiData(input) {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}&units=metric`);
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}&units=metric`;units=metric
+    const response = await fetch(apiUrl);
 
-    if(response != 'ok') {
+    if(!response.ok) {
         throw new Error('API_ERROR');
     }
+
+    const data = await response.json();
+    console.log(data);
+    return data;
+}
+
+function showData(data) {
+
 }
