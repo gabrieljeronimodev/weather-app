@@ -2,7 +2,7 @@
 
 A simple weather application that allows users to search for a city or country and view real-time weather information. The app displays temperature, localization, humidity, wind speed, and weather conditions based on the user's input.
 
-**Link to project:** https://gabrieljeronimodev.github.io/Weather-App/
+**Link to project:** https://gabrieljeronimodev.github.io/weather-app/
 
 ## How It's Made:
 
